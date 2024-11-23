@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+Sure! Here's a detailed README file for your Number Guesser Game:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Number Guesser Game
 
-In the project directory, you can run:
+## Overview
+The Number Guesser Game is a simple and fun game where the player tries to guess a randomly generated secret number between 1 and 100. The game provides feedback on each guess and limits the number of attempts based on the selected difficulty level.
 
-### `npm start`
+## How to Play
+1. **Start the Game**:
+   - Open the game in your browser. You will see the game interface with a title, a difficulty selection dropdown, an input field for your guess, and buttons for submitting your guess and restarting the game.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Select Difficulty**:
+   - Choose a difficulty level from the dropdown menu:
+     - **Easy**: 10 attempts
+     - **Medium**: 7 attempts
+     - **Hard**: 5 attempts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Make a Guess**:
+   - Enter a number between 1 and 100 in the input field.
+   - Click the "Guess" button to submit your guess.
 
-### `npm test`
+4. **Receive Feedback**:
+   - After each guess, the game will provide feedback:
+     - **Too low!**: Your guess is lower than the secret number.
+     - **Too high!**: Your guess is higher than the secret number.
+     - **Congratulations! You guessed the correct number!**: You guessed the secret number correctly.
+     - **Game over! The correct number was [number].**: You have used all your attempts without guessing the correct number.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Track Your Attempts**:
+   - The game displays the number of remaining attempts. Make sure to guess wisely!
 
-### `npm run build`
+6. **Restart the Game**:
+   - Click the "Restart" button to start a new game with a new secret number and reset attempts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Optional Features
+- **Difficulty Levels**: Adjust the number of attempts based on the selected difficulty.
+- **Restart Game**: Restart the game without reloading the page.
+- **Styling and Animations**: Enjoy a visually appealing game with smooth animations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Error Handling
+- **Input Validation**: Ensure your guesses are numbers between 1 and 100. Invalid inputs will prompt a message to enter a valid number.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation and Setup
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/number-guesser.git
+   cd number-guesser
+   ```
 
-### `npm run eject`
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Run the Game**:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Open in Browser**:
+   - Open http://localhost:3000 to view the game in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
+Feel free to fork the repository and submit pull requests. Contributions are welcome!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
+This project is licensed under the MIT License.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to customize this README file further to suit your project's needs. If you have any other questions or need more assistance, let me know!
