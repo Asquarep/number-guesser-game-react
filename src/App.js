@@ -14,6 +14,7 @@ const NumberGuesser = () => {
     const numGuess = parseInt(guess, 10);
     if (isNaN(numGuess) || numGuess < 1 || numGuess > 100) {
       setFeedback('Please enter a valid number between 1 and 100.');
+      setGuess('')
       return;
     }
 
@@ -26,8 +27,9 @@ const NumberGuesser = () => {
     }
 
     setAttempts(attempts - 1);
-    if (attempts - 1 === 0) {
+    if (attempts - 1 <= 0) {
       setFeedback(`Game over! The correct number was ${secretNumber}.`);
+      setAttempts(0)
     }
   };
 
@@ -52,6 +54,20 @@ const NumberGuesser = () => {
   return (
     <div className="game">
       <h1>Number Guesser Game</h1>
+      <label>
+        Select Difficulty:
+        <select value={difficulty} onChange={handleDifficultyChange}>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <p>Guess the number between 1 and 100</p>
+      <input type="number" value={guess} onChange={handleInputChange} />
+      <button onClick={handleGuess}>Guess</button>
+      <button onClick={restartGame}>Restart</button>
+      <p>{feedback}</p>
+      <p>Attempts remaining: {attempts}</p>
     </div>
   );
 };
