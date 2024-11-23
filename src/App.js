@@ -67,8 +67,8 @@ const NumberGuesser = () => {
       <p>Guess the number between 1 and 100</p>
       <input type="number" value={guess} onChange={handleInputChange} />
       <div>
-        <button onClick={restartGame}>Restart</button>
-        <button onClick={handleGuess}>Guess</button>
+        <button className='restart' onClick={restartGame}>Restart</button>
+        <button className='guess' onClick={handleGuess}>Guess</button>
       </div>
       <p>{feedback}</p>
       <p>Attempts remaining: {attempts}</p>
