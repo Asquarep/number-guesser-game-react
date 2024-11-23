@@ -40,15 +40,12 @@ const NumberGuesser = () => {
   const handleDifficultyChange = (e) => {
     const level = e.target.value;
     setDifficulty(level);
-    // setAttempts(level === 'easy' ? 10 : level === 'medium' ? 7 : 5);
-    // restartGame();
   };
 
   const restartGame = () => {
     setSecretNumber(generateSecretNumber());
     setGuess('');
     setFeedback('');
-    // setAttempts(difficulty === 'easy' ? 10 : difficulty === 'medium' ? 7 : 5);
   };
 
   useEffect(()=> {
@@ -69,8 +66,10 @@ const NumberGuesser = () => {
       </label>
       <p>Guess the number between 1 and 100</p>
       <input type="number" value={guess} onChange={handleInputChange} />
-      <button onClick={handleGuess}>Guess</button>
-      <button onClick={restartGame}>Restart</button>
+      <div>
+        <button onClick={restartGame}>Restart</button>
+        <button onClick={handleGuess}>Guess</button>
+      </div>
       <p>{feedback}</p>
       <p>Attempts remaining: {attempts}</p>
     </div>
