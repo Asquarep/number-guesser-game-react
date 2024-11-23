@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 const generateSecretNumber = () => Math.floor(Math.random() * 100) + 1;
@@ -40,16 +40,21 @@ const NumberGuesser = () => {
   const handleDifficultyChange = (e) => {
     const level = e.target.value;
     setDifficulty(level);
-    setAttempts(level === 'easy' ? 10 : level === 'medium' ? 7 : 5);
-    restartGame();
+    // setAttempts(level === 'easy' ? 10 : level === 'medium' ? 7 : 5);
+    // restartGame();
   };
 
   const restartGame = () => {
     setSecretNumber(generateSecretNumber());
     setGuess('');
     setFeedback('');
-    setAttempts(difficulty === 'easy' ? 10 : difficulty === 'medium' ? 7 : 5);
+    // setAttempts(difficulty === 'easy' ? 10 : difficulty === 'medium' ? 7 : 5);
   };
+
+  useEffect(()=> {
+    setAttempts(difficulty === 'easy' ? 10 : difficulty === 'medium' ? 7 : 5);
+    restartGame();
+  },[difficulty])
 
   return (
     <div className="game">
